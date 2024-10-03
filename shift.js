@@ -99,7 +99,7 @@ function initialise() {
 }
 
 function updateAttendance() {
-  var n = spreadsheet.getRange(eventCountCell).getValue() - 1;
+  var n = spreadsheet.getRange(eventCountCell).getValue();
   var row = initalRow;
 
   var confirm = Browser.msgBox('You will uploud attendance.','Execute script?', Browser.Buttons.OK_CANCEL);
@@ -147,7 +147,7 @@ function deleteAttendance () {
     return null;
   };
 
-  var n = spreadsheet.getRange(eventCountCell).getValue() - 1;
+  var n = spreadsheet.getRange(eventCountCell).getValue();
   var row = initalRow;
   for (let i = 0; i < n; i++) {
     var id = spreadsheet.getRange(row, idCol).getValue();
